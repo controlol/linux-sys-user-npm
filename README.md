@@ -12,6 +12,8 @@ Use Node to manage Linux user easily. All APIs do what you think. Promise and
 
 ## Notes
 
+This is (again) a fork of linux-sys-user package. This package has added functionality for choosing the group and user id when creating a user. It also allows you too create a group with the same ID as the user. It has no username restrictions anymore.
+
 This is a fork of [wxygeek](https://github.com/wxygeek) abandoned [linux-user](https://github.com/wxygeek/linux-user) project.
 
 ## Installation
@@ -208,6 +210,12 @@ console.log(user);
       The default is to leave this field blank, which causes the system to
       select the default SELinux user.
       ```
+
+      * `gid` *Number* The the desired group id for the new user
+      
+      * `uid` *Number* The the desired user id for the new user
+      
+      * `create_group` *Boolean* Create a new group with the same uid
 
 	* callback function(err, userInfo)
 	
